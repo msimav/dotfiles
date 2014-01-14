@@ -1,0 +1,13 @@
+{
+	"installed_packages":
+	[
+		"Ensime",
+		"FileDiffs",
+		"Google Spell Check",
+		"LiveReload",
+		"Markdown Preview",
+		"SublimeSBT",
+		"Theme - Spacegray",
+		"TrailingSpaces"
+	]
+}
