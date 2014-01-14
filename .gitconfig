@@ -1,1 +1,26 @@
-/home/mustafa/.gitconfig
+[user]
+	name = Mustafa Simav
+	email = ms@msimav.net
+
+[github]
+	user = msimav
+
+[alias]
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit -n 20
+	st = status -s
+	co = checkout
+	mg = merge --no-ff --edit
+	sd = diff --stat
+	dc = diff --cached
+	last = log -u -1
+	unstage = reset HEAD --
+
+[core]
+	pager = less
+	editor = vim
+
+[color]
+	ui = true
+
+[push]
+	default = matching
