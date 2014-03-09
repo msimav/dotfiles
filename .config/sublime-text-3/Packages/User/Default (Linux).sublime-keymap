@@ -1,6 +1,7 @@
 [
 	{ "keys": ["ctrl+v"], "command": "paste_and_indent" },
 	{ "keys": ["ctrl+shift+v"], "command": "paste" },
+	{ "keys": ["ctrl+shift+w"], "command": "close" },
 	{ "keys": ["ctrl+w"], "command": "expand_selection", "args": {"to": "scope"} },
 	{ "keys": ["alt+m"], "command": "markdown_preview", "args": {"target": "browser", "parser":"markdown"} }
 ]

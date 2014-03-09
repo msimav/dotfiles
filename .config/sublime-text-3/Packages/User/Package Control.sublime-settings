@@ -1,11 +1,11 @@
 {
 	"installed_packages":
 	[
+		"Emmet",
 		"Ensime",
 		"FileDiffs",
 		"Google Spell Check",
-		"LiveReload",
-		"Markdown Preview",
+		"LiveStyle",
 		"SublimeSBT",
 		"Theme - Spacegray",
 		"TrailingSpaces"
