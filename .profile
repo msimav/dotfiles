@@ -8,6 +8,11 @@
 # for ssh logins, install and configure the libpam-umask package.
 #umask 022
 
+# Source Xmodmap
+if [ -f "$HOME/.Xmodmap" ] ; then
+    xmodmap "$HOME/.Xmodmap"
+fi
+
 # pyenv and rbenv
 export PATH="$HOME/.pyenv/bin:$PATH"
 export PATH="$HOME/.rbenv/bin:$PATH"
@@ -19,3 +24,4 @@ fi
 
 # Android
 export ANDROID_HOME="$HOME/.local/opt/adt-bundle-linux-x86_64/sdk"
+
