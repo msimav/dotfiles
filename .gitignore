@@ -1,2 +1,3 @@
 *.last-run
 *.cache
+**/ColorPicker/**

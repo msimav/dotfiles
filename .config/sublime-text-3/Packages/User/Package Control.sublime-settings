@@ -1,11 +1,15 @@
 {
 	"installed_packages":
 	[
+		"Better CoffeeScript",
+		"ColorPicker",
 		"Emmet",
 		"Ensime",
 		"FileDiffs",
 		"Google Spell Check",
 		"LiveStyle",
+		"SideBarEnhancements",
+		"SublimeLinter",
 		"SublimeSBT",
 		"Theme - Spacegray",
 		"TrailingSpaces"
