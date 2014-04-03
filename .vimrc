@@ -60,3 +60,6 @@ syntax on
 
 " gVim
 set gfn=Inconsolata\ Medium\ 11
+
+" sudo save trick
+cmap w!! w !sudo tee > /dev/null %
