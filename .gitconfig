@@ -17,6 +17,7 @@
     unmerge = reset --hard HEAD
     uncommit = reset --soft HEAD~1
     pr = !git diff $(git merge-base develop HEAD) HEAD
+    conflicts = diff --name-only --diff-filter=U
 
 [core]
     pager = less
