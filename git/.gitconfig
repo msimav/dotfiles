@@ -1,0 +1,31 @@
+[user]
+    name = Mustafa Simav
+    email = ms@msimav.net
+
+[github]
+    user = msimav
+
+[alias]
+    lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    st = status -s
+    co = checkout
+    mg = merge --no-ff --edit
+    sd = diff --stat
+    dc = diff --cached
+    last = log -u -1 --stat
+    unstage = reset HEAD --
+    uncommit = reset --soft HEAD~1
+    pr = !git diff $(git merge-base develop HEAD) HEAD
+    conflicts = diff --name-only --diff-filter=U
+
+[core]
+    pager = less
+    editor = vim
+    whitespace = cr-at-eol
+	excludesfile = ~/.gitignore
+
+[color]
+    ui = true
+
+[push]
+    default = current
