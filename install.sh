@@ -30,3 +30,4 @@ fi
 set -x
 stow -t ~ git
 stow -t ~ tmux
+stow -t ~ zsh

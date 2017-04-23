@@ -1,0 +1,5 @@
+alias ls="ls --color=auto --group-directories-first -h"
+alias df="df -h"
+alias du="du -ch"
+alias diff="colordiff -u"
+alias less="less -R"
