@@ -7,6 +7,19 @@ if ! [ -x "$(command -v stow)" ]; then
     printf "brew install stow\n"
     brew install stow
     ;;
+  GNU/Linux)
+    source /etc/os-release
+    case $NAME in
+      NixOS)
+        printf "nix-env -i stow\n"
+        nix-env -i stow
+        ;;
+      *)
+        printf "\rDon't support Distro $NAME\n"
+        exit 1
+        ;;
+    esac
+    ;;
   *)
     printf "\rDon't support OS $(uname -o)\n"
     exit 1
