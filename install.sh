@@ -8,11 +8,15 @@ if ! [ -x "$(command -v stow)" ]; then
     brew install stow
     ;;
   GNU/Linux)
-    source /etc/os-release
+    . /etc/os-release
     case $NAME in
       NixOS)
         printf "nix-env -i stow\n"
         nix-env -i stow
+        ;;
+      Ubuntu)
+        printf "apt-get install stow\n"
+        sudo apt-get install stow
         ;;
       *)
         printf "\rDon't support Distro $NAME\n"
