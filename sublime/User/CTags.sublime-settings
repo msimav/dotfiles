@@ -1,0 +1,5 @@
+{
+    "autocomplete": false,
+    "command": "/usr/local/var/rbenv/shims/coffeetags",
+    "tag_file" : "/Users/musta/Developer/Socrata/.odysseus.tags",
+}

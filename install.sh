@@ -36,3 +36,12 @@ stow -t ~ git
 stow -t ~ tmux
 stow -t ~ vim
 stow -t ~ zsh
+
+case "$(uname -o)" in
+Darwin)
+  stow -t "$HOME/Library/Application Support/Sublime Text 3/Packages" sublime
+  ;;
+GNU/Linux)
+  stow -t "$HOME/.config/sublime-text-3/Packages" sublime
+  ;;
+esac

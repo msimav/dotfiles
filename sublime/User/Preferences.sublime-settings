@@ -1,0 +1,62 @@
+{
+	"added_words":
+	[
+		"lodash",
+		"chai",
+		"procrustes",
+		"src",
+		"app",
+		"api",
+		"metadata"
+	],
+	"bold_folder_labels": true,
+	"color_scheme": "Packages/User/SublimeLinter/RailsCastsColorScheme (SL).tmTheme",
+	"default_encoding": "UTF-8",
+	"default_line_ending": "unix",
+	"drag_text": false,
+	"ensure_newline_at_eof_on_save": true,
+	"expand_tabs_on_save": true,
+	"find_selected_text": true,
+	"folder_exclude_patterns":
+	[
+		".git",
+		".hg",
+		".idea",
+		".svn",
+		"CVS",
+		"lib",
+		"node_modules",
+		"target"
+	],
+	"font_face": "Inconsolata",
+	"font_options":
+	[
+		"subpixel_antialias"
+	],
+	"font_size": 16,
+	"highlight_line": true,
+	"ignored_packages":
+	[
+		"SublimeHaskell",
+		"Vintage"
+	],
+	"index_exclude_patterns":
+	[
+		"*.log",
+		"lib",
+		"target",
+		".idea"
+	],
+	"preview_on_click": true,
+	"rulers":
+	[
+		120
+	],
+	"scroll_speed": 0,
+	"spell_check": true,
+	"tab_size": 2,
+	"theme": "Soda Light 3.sublime-theme",
+	"trailing_spaces_include_current_line": false,
+	"translate_tabs_to_spaces": true,
+	"trim_trailing_white_space_on_save": true
+}
