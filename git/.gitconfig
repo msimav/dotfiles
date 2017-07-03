@@ -29,3 +29,6 @@
 
 [push]
     default = current
+
+[includeIf "gitdir:~/Developer/"]
+    path = .gitconfig.vngrs
