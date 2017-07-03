@@ -33,6 +33,7 @@ fi
 
 set -x
 stow -t ~ git
+stow -t ~ sbt
 stow -t ~ tmux
 stow -t ~ vim
 stow -t ~ zsh
