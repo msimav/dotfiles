@@ -1,2 +1,3 @@
 alias cd = project
 alias ls = projects
+alias cc = ;clean;test:compile
