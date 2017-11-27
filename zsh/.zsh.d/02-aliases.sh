@@ -1,3 +1,4 @@
+alias vim=nvim
 alias ls="ls --color=auto --group-directories-first -h"
 alias df="df -h"
 alias du="du -ch"

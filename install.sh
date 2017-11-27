@@ -41,6 +41,7 @@ stow -t ~ sbt
 stow -t ~ tmux
 stow -t ~ vim
 stow -t ~ zsh
+stow -t ~/.config/nvim nvim
 
 case "$(uname -o)" in
 Darwin)
