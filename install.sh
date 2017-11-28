@@ -18,6 +18,10 @@ if ! [ -x "$(command -v stow)" ]; then
         printf "apt-get install stow\n"
         sudo apt-get install stow
         ;;
+      Arch*)
+        printf "pacman -S stow\n"
+        sudo pacman -S stow
+        ;;
       *)
         printf "\rDon't support Distro $NAME\n"
         exit 1
