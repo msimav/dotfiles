@@ -1,5 +1,7 @@
-export PYENV_ROOT=/usr/local/var/pyenv
-export PATH="$PYENV_ROOT/shims:$PATH"
+test -d /usr/local/var/pyenv && PYENV_ROOT=/usr/local/var/pyenv
+test -d $HOME/.pyenv && PYENV_ROOT=$HOME/.pyenv
+export PYENV_ROOT
+export PATH="$PYENV_ROOT/bin:$PYENV_ROOT/shims:$PATH"
 
 # Lazy initializer to speed up zsh startup
 pyenv() {
