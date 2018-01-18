@@ -39,9 +39,11 @@ nnoremap <leader>t :CtrlPTag<CR>
 call plug#begin('~/.config/nvim/plugged')
 Plug 'bling/vim-airline'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'dracula/vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'mileszs/ack.vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 call plug#end()
 
+color dracula
