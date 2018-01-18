@@ -45,8 +45,10 @@ stow -t ~/.config/nvim nvim
 case "$(uname -o)" in
 Darwin)
   stow -t "$HOME/Library/Application Support/Sublime Text 3/Packages" sublime
+  stow -t "$HOME/Library/Preferences/kitty" kitty
   ;;
 GNU/Linux)
   stow -t "$HOME/.config/sublime-text-3/Packages" sublime
+  stow -t "$HOME/.config/kitty" kitty
   ;;
 esac
