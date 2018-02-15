@@ -35,6 +35,11 @@ let g:ctrlp_user_command = 'ag %s -l --nocolor --ignore-dir .git --hidden -g ""'
 nnoremap <leader>b :CtrlPBuffer<CR>
 nnoremap <leader>t :CtrlPTag<CR>
 
+" neoformat settings
+let g:neoformat_only_msg_on_error = 1
+nmap <Leader>nf :Neoformat<CR>
+vmap <Leader>nf :Neoformat<CR>
+
 " Vim Plugins
 call plug#begin('~/.config/nvim/plugged')
 Plug 'bling/vim-airline'
@@ -42,6 +47,7 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'dracula/vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'mileszs/ack.vim'
+Plug 'sbdchd/neoformat'
 Plug 'sheerun/vim-polyglot'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 call plug#end()
