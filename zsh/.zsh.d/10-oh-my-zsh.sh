@@ -10,7 +10,7 @@ POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status vcs time)
 
 DISABLE_LS_COLORS="true"
 
-plugins=(git tmuxinator scala sublime vagrant colorize)
+plugins=(git docker tmuxinator sublime httpie)
 
 if [[ "$OSTYPE" = darwin* ]]; then
   plugins=(osx $plugins)
