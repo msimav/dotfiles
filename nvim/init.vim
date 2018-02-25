@@ -35,30 +35,15 @@ let g:ctrlp_user_command = 'ag %s -l --nocolor --ignore-dir .git --hidden -g ""'
 nnoremap <leader>b :CtrlPBuffer<CR>
 nnoremap <leader>t :CtrlPTag<CR>
 
-" NERD
-let g:NERDSpaceDelims = 1
-
-" Use deoplete.
-let g:deoplete#enable_at_startup = 1
-
-" Disable haskell-vim omnifunc
-let g:haskellmode_completion_ghc = 0
-autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
-
 " Vim Plugins
 call plug#begin('~/.config/nvim/plugged')
 Plug 'bling/vim-airline'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'dracula/vim'
-Plug 'eagletmt/ghcmod-vim'
-Plug 'eagletmt/neco-ghc'
 Plug 'junegunn/vim-easy-align'
 Plug 'mileszs/ack.vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-Plug 'scrooloose/nerdcommenter'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 call plug#end()
 
 color dracula
