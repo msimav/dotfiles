@@ -1,4 +1,24 @@
+" Vim Plugins
+call plug#begin('~/.config/nvim/plugged')
+Plug 'AndrewRadev/splitjoin.vim'
+Plug 'bling/vim-airline'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'dracula/vim'
+Plug 'fatih/vim-go'
+Plug 'junegunn/vim-easy-align'
+Plug 'mileszs/ack.vim'
+Plug 'neomake/neomake'
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'sheerun/vim-polyglot'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'tpope/vim-commentary'
+Plug 'zchee/deoplete-go'
+call plug#end()
+
+set nocompatible
+
 syntax on          " syntax highlighting
+color dracula
 set mouse=a
 set history=50     " keep 50 lines of command line history
 set ruler          " show the cursor position all the time
@@ -20,12 +40,23 @@ let mapleader=","  " leader is comma
 set cursorline     " highlight current line
 hi CursorLine cterm=NONE ctermbg=8 ctermfg=NONE
 
-" jk is escape
-inoremap jk <esc>
+if has('persistent_undo')
+  set undofile
+  set undodir=~/.cache/vim
+endif
+
+" neovim python support
+let g:python3_host_prog = '/Users/mustafa/.config/nvim/py3neovim/bin/python'
+
+" deocomplete
+let g:deoplete#enable_at_startup = 1
 
 " ag.vim
 let g:ackprg = 'ag --vimgrep'
 nnoremap <leader>a :Ack!<space>
+
+" NERD
+nmap <Leader>nn :NERDTreeToggle<CR>
 
 " CtrlP settings
 let g:ctrlp_match_window = 'bottom,order:ttb'
@@ -35,27 +66,22 @@ let g:ctrlp_user_command = 'ag %s -l --nocolor --ignore-dir .git --hidden -g ""'
 nnoremap <leader>b :CtrlPBuffer<CR>
 nnoremap <leader>t :CtrlPTag<CR>
 
-" neoformat settings
-let g:neoformat_only_msg_on_error = 1
-nmap <Leader>nf :Neoformat<CR>
-vmap <Leader>nf :Neoformat<CR>
-
-" Vim Plugins
-call plug#begin('~/.config/nvim/plugged')
-Plug 'bling/vim-airline'
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'dracula/vim'
-Plug 'junegunn/vim-easy-align'
-Plug 'mileszs/ack.vim'
-Plug 'neomake/neomake'
-Plug 'sbdchd/neoformat'
-Plug 'sheerun/vim-polyglot'
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-call plug#end()
-
-color dracula
-
 " neomake
 call neomake#configure#automake('w')
 
+" Go settings
 autocmd Filetype go setlocal tabstop=2
+let g:go_fmt_command = "goimports"
+autocmd FileType go nmap <leader>gb :GoBuild<CR>
+autocmd FileType go nmap <leader>gd :GoDoc<CR>
+autocmd FileType go nmap <leader>gt :GoTest<CR>
+autocmd FileType go nmap <leader>gg :GoTestFunc<CR>
+autocmd FileType go nmap <leader>gc :GoCoverageToggle<CR>
+autocmd FileType go nmap <leader>gf :GoAlternate<CR>
+autocmd FileType go nmap <leader>gi :GoImplements<CR>
+
+" Quickfix
+nnoremap <leader>1 :cn<CR>
+nnoremap <leader>2 :cp<CR>
+nnoremap <leader>` :cclose<CR>
+
