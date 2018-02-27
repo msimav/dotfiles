@@ -47,9 +47,15 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'dracula/vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'mileszs/ack.vim'
+Plug 'neomake/neomake'
 Plug 'sbdchd/neoformat'
 Plug 'sheerun/vim-polyglot'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 call plug#end()
 
 color dracula
+
+" neomake
+call neomake#configure#automake('w')
+
+autocmd Filetype go setlocal tabstop=2
