@@ -1,0 +1,34 @@
+{
+  "workbench.colorTheme"                : "Dracula Soft",
+  "editor.fontFamily"                   : "Hack",
+  "editor.fontSize"                     : 13,
+  "editor.tabSize"                      : 2,
+  "editor.fontLigatures"                : true,
+  "editor.minimap.enabled"              : false,
+  "explorer.confirmDelete"              : false,
+  "files.trimTrailingWhitespace"        : true,
+  "terminal.integrated.fontFamily"      : "Inconsolata-g for Powerline",
+  "workbench.statusBar.feedback.visible": false,
+  "go.formatTool"                       : "goimports",
+
+  // Python
+  "python.autoComplete.addBrackets": true,
+  "python.formatting.autopep8Args" : [
+    "--aggressive",
+    "--aggressive",
+    "--max-line-length",
+    "120"
+  ],
+  "[python]": {
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": false
+    },
+    "editor.tabSize"     : 4,
+    "editor.formatOnSave": false,
+  },
+  "workbench.startupEditor" : "newUntitledFile",
+  "window.zoomLevel"        : 0,
+  "files.insertFinalNewline": true,
+  "explorer.enableDragAndDrop": false,
+  "explorer.openEditors.visible": 0
+}
