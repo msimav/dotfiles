@@ -8,4 +8,6 @@ if [ -x "$(command -v fzf)" ]; then
     fi
     session=$(tmux list-sessions -F "#{session_name}" 2>/dev/null | fzf --exit-0) &&  tmux $change -t "$session" || echo "No sessions found."
   }
+
+  [ -d /usr/local/opt/fzf/shell ] && source /usr/local/opt/fzf/shell/key-bindings.zsh
 fi
