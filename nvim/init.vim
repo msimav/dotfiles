@@ -11,6 +11,7 @@ Plug 'neomake/neomake'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'sheerun/vim-polyglot'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-commentary'
 Plug 'zchee/deoplete-go'
 call plug#end()
@@ -45,11 +46,21 @@ if has('persistent_undo')
   set undodir=~/.cache/vim
 endif
 
+" Switch buffer with TAB
+nmap <Tab> :b#<CR>
+
 " neovim python support
 let g:python3_host_prog = '/Users/mustafa/.config/nvim/py3neovim/bin/python'
 
 " deocomplete
 let g:deoplete#enable_at_startup = 1
+" Disable deoplete when in multi cursor mode
+function! Multiple_cursors_before()
+    let b:deoplete_disable_auto_complete = 1
+endfunction
+function! Multiple_cursors_after()
+    let b:deoplete_disable_auto_complete = 0
+endfunction
 
 " ag.vim
 let g:ackprg = 'ag --vimgrep'
@@ -57,6 +68,8 @@ nnoremap <leader>a :Ack!<space>
 
 " NERD
 nmap <Leader>nn :NERDTreeToggle<CR>
+nmap <Leader>nm :NERDTreeFind<CR>
+let NERDTreeShowHidden=1
 
 " CtrlP settings
 let g:ctrlp_match_window = 'bottom,order:ttb'
@@ -72,6 +85,15 @@ call neomake#configure#automake('w')
 " Go settings
 autocmd Filetype go setlocal tabstop=2
 let g:go_fmt_command = "goimports"
+let g:go_highlight_build_constraints = 1
+let g:go_highlight_extra_types = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_types = 1
+let g:go_auto_sameids = 1
+set completeopt-=preview
 autocmd FileType go nmap <leader>gb :GoBuild<CR>
 autocmd FileType go nmap <leader>gd :GoDoc<CR>
 autocmd FileType go nmap <leader>gt :GoTest<CR>
@@ -79,6 +101,8 @@ autocmd FileType go nmap <leader>gg :GoTestFunc<CR>
 autocmd FileType go nmap <leader>gc :GoCoverageToggle<CR>
 autocmd FileType go nmap <leader>gf :GoAlternate<CR>
 autocmd FileType go nmap <leader>gi :GoImplements<CR>
+autocmd FileType go nmap <leader>ee :GoIfErr<CR>
+autocmd FileType go nmap <leader>, :GoInfo<CR>
 
 " Quickfix
 nnoremap <leader>1 :cn<CR>
