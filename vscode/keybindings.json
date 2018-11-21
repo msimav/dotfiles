@@ -1,31 +1,45 @@
 // Place your key bindings in this file to overwrite the defaults
 [
   {
-    "key": "ctrl+]",
+    "key"    : "ctrl+]",
     "command": "editor.action.goToDeclaration",
-    "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+    "when"   : "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
   },
   {
-    "key": "f12",
+    "key"    : "f12",
     "command": "-editor.action.goToDeclaration",
-    "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+    "when"   : "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
   },
   {
-    "key": "ctrl+o",
+    "key"    : "ctrl+o",
     "command": "workbench.action.navigateBack"
   },
   {
-    "key": "ctrl+-",
+    "key"    : "ctrl+-",
     "command": "-workbench.action.navigateBack"
   },
   {
-    "key": "cmd+backspace",
+    "key"    : "cmd+backspace",
     "command": "editor.action.deleteLines",
-    "when": "textInputFocus && !editorReadonly"
+    "when"   : "textInputFocus && !editorReadonly"
   },
   {
-    "key": "shift+cmd+k",
+    "key"    : "shift+cmd+k",
     "command": "-editor.action.deleteLines",
-    "when": "textInputFocus && !editorReadonly"
+    "when"   : "textInputFocus && !editorReadonly"
+  },
+  {
+    "key"    : "cmd+w",
+    "command": "-workbench.action.closeWindow"
+  },
+  {
+    "key"    : "cmd+w",
+    "command": "expand_region",
+    "when"   : "editorTextFocus"
+  },
+  {
+    "key"    : "cmd+shift+w",
+    "command": "undo_expand_region",
+    "when"   : "editorTextFocus && editorHasSelection"
   }
 ]

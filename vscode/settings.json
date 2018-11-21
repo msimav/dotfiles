@@ -27,7 +27,7 @@
     "editor.formatOnSave": false,
   },
   "workbench.startupEditor" : "newUntitledFile",
-  "window.zoomLevel"        : 0,
+  "window.zoomLevel": 0,
   "files.insertFinalNewline": true,
   "explorer.enableDragAndDrop": false,
   "explorer.openEditors.visible": 0
