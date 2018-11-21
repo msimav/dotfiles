@@ -16,5 +16,16 @@
 		"prefix"     : "pry",
 		"body"       : "import code; code.interact(local=dict(globals(), **locals()))",
 		"description": "Python equivalent of ruby's binding.pry "
+	},
+	"Main": {
+		"prefix": "ifmain",
+		"body"  : [
+			"def main():"
+			"\t$1",
+			"",
+			"if __name__ == \"__main__\":",
+			"\tmain()"
+		],
+		"description": "Quickly create main method"
 	}
 }
