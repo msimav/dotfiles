@@ -1,18 +1,32 @@
 {
-  "workbench.colorTheme"                : "Dracula Soft",
-  "editor.fontFamily"                   : "Hack",
-  "editor.fontSize"                     : 13,
-  "editor.tabSize"                      : 2,
+  "editor.fontFamily"                   : "'Fira Code', Hack",
   "editor.fontLigatures"                : true,
+  "editor.fontSize"                     : 13,
   "editor.minimap.enabled"              : false,
+  "editor.tabSize"                      : 2,
+  "editor.wordBasedSuggestions"         : false,
   "explorer.confirmDelete"              : false,
+  "explorer.enableDragAndDrop"          : false,
+  "explorer.openEditors.visible"        : 0,
+  "files.insertFinalNewline"            : true,
   "files.trimTrailingWhitespace"        : true,
+  "terminal.integrated.cursorBlinking"  : true,
   "terminal.integrated.fontFamily"      : "Inconsolata-g for Powerline",
+  "window.zoomLevel"                    : 0,
+  "workbench.colorTheme"                : "Dracula Soft",
+  "workbench.startupEditor"             : "newUntitledFile",
   "workbench.statusBar.feedback.visible": false,
-  "go.formatTool"                       : "goimports",
+
+  // Go
+  "go.formatTool": "goimports",
+
+  // Haskell
+  "stylishHaskell.showConsoleOnError": false,
 
   // Python
+  "python.envFile"                 : "${workspaceFolder}/.vscode/.env",
   "python.autoComplete.addBrackets": true,
+  "python.formatting.provider"     : "autopep8",
   "python.formatting.autopep8Args" : [
     "--aggressive",
     "--aggressive",
@@ -25,10 +39,5 @@
     },
     "editor.tabSize"     : 4,
     "editor.formatOnSave": false,
-  },
-  "workbench.startupEditor" : "newUntitledFile",
-  "window.zoomLevel": 0,
-  "files.insertFinalNewline": true,
-  "explorer.enableDragAndDrop": false,
-  "explorer.openEditors.visible": 0
+  }
 }
