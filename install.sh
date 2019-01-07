@@ -45,6 +45,7 @@ stow -t ~ sbt
 stow -t ~ tmux
 stow -t ~ zsh
 stow -t ~/.config/nvim nvim
+stow -t ~/.config/fish fish
 mkdir -p "$KITTY" && stow -t "$KITTY" kitty
 test -d "$SUBLIME" && stow -t "$SUBLIME" sublime
 test -d "$VSCODE" && stow -t "$VSCODE" vscode

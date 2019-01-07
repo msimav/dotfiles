@@ -1,0 +1,3 @@
+[submodule "fish/theme-sushi"]
+	path = fish/theme-sushi
+	url = git@github.com:umayr/theme-sushi.git
