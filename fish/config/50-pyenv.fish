@@ -10,7 +10,7 @@ if test -d $PYENV_ROOT
   set -gx PATH $PYENV_ROOT/bin $PYENV_ROOT/shims $PATH
 end
 
-if test -x (command -v pyenv)
+if command -s pyenv > /dev/null
   function _init_pyenv --on-event fish_preexec
     if test "pyenv" = $argv[1] -a "function" != (type -t pyenv)
       source (pyenv init -|psub)

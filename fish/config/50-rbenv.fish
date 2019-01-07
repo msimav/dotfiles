@@ -10,7 +10,7 @@ if test -d $RBENV_ROOT
   set -gx PATH $RBENV_ROOT/bin $RBENV_ROOT/shims $PATH
 end
 
-if test -x (command -v rbenv)
+if command -s rbenv > /dev/null
   function _init_rbenv --on-event fish_preexec
     if test "rbenv" = $argv[1] -a "function" != (type -t rbenv)
       source (rbenv init -|psub)

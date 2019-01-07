@@ -1,3 +1,3 @@
-if test -x (command -v bat)
+if command -s bat > /dev/null
   alias cat bat
 end
