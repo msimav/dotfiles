@@ -1,5 +1,4 @@
-set theme sushi
-set -g theme_complete_path yes
+set theme msimav
 
 if test -d ~/.config/fish/theme-$theme
   for file in ~/.config/fish/theme-$theme/*.fish
