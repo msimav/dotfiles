@@ -43,9 +43,9 @@ function fish_prompt
   set -l last_command_status $status
 
   set -l normal_color     (set_color normal)
-  set -l success_color    (set_color cyan)
-  set -l error_color      (set_color red --bold)
-  set -l repository_color (set_color brblue)
+  set -l success_color    (set_color 8be9fd)
+  set -l error_color      (set_color ff5555 --bold)
+  set -l repository_color (set_color ffb86c)
 
   if git::is_repo
     echo -n -s $repository_color "[" (git::branch_name) "]" $normal_color " "
