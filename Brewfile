@@ -21,7 +21,7 @@ brew "fswatch"
 brew "fzf"
 brew "gawk"
 brew "git"
-brew "gnu-sed", args: ["with-default-names"]
+brew "gnu-sed"
 brew "gnu-tar"
 brew "gnupg"
 brew "go"

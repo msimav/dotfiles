@@ -1,6 +1,6 @@
 #!/bin/sh
 
-case "$(uname -o)" in
+case "$(uname)" in
 Darwin)
   export INSTALL_CMD="brew install stow"
   export KITTY="$HOME/Library/Preferences/kitty"
