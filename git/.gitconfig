@@ -32,5 +32,8 @@
 [push]
     default = current
 
-[includeIf "gitdir:~/Developer/logsign/**"]
-    path = .gitconfig.logsign
+[includeIf "gitdir:~/Developer/212data/**"]
+    path = .gitconfig.212data
+
+[includeIf "gitdir:~/Developer/hemlak/**"]
+    path = .gitconfig.hemlak

@@ -1,6 +1,0 @@
-[user]
-    email = mustafa.simav@logsign.net
-    signingkey = F1EFD6531C06D720
-
-[commit]
-    gpgsign = true
